@@ -8,7 +8,7 @@ CuPy is an open-source matrix library accelerated with NVIDIA CUDA. It also uses
 | **Intensity** | **Involves**  | **Mentors** |
 | ------------- | --------------|------------ |
 | Intermediate  | Python, NumPy |   asi1024   |
-                  SciPy & CUDA
+|               | SciPy & CUDA  |             |
                   
 ## Technical Details
 

@@ -3,18 +3,43 @@ Tanish Sharrma, NumFocus 2019
 
 ## Abstract
 
-CuPy is an open-source matrix library accelerated with NVIDIA CUDA. It also uses CUDA-related libraries including cuBLAS, cuDNN, cuRand, cuSolver, cuSPARSE, cuFFT and NCCL to make full use of the GPU architecture. Aiming to bring Numpy syntax coding into the modern age of GPU calculations by adding advanced FFT functions into CuPy. Expand the number of functions available for use on the GPU to allow more code to execute transparently on the GPU.
+CuPy is an open-source matrix library accelerated with NVIDIA CUDA. It also uses CUDA-related libraries including cuBLAS, cuDNN, cuRand, cuSolver, cuSPARSE, cuFFT and NCCL to make full use of the GPU architecture. Aiming to bring Numpy syntax coding into the modern age of GPU calculations by adding advanced FFT functions into CuPy. Expand the number of functions available for use on the GPU to allow more code to execute transparently on the GPU. Also, CuPy covers many of the functions that are provided by Numpy, but not all of them. To review the Numpy functions that CuPy doesn't cover yet, and implement them in CuPy to use the full speed of the GPU.
 
 | **Intensity** | **Involves**  | **Mentors** |
 | ------------- | --------------|------------ |
 | Intermediate  | Python, NumPy |   asi1024   |
 |               | SciPy & CUDA  |             |
                   
-## Technical Details
+## Current Situation
 
-- All the work
+To Formalize CuPy Benchmark for code testing, when doing Continuous Integration testing for CuPy, there isn't a good estimator for the speed of the code. CuPy is all about improved speed of calculation on the GPU, so speed matters. Develop a comprehensive benchmark for CuPy to help assess how much speed enhancements help, and make sure that other code changes don't damage performance.
 
-## Schedule of Deliverables
+## Pre-GSoc Project Commits, Pull Requests and Issues and community work done :
+
+1) Pull Request and commit : Added a new feature and resolved for Issue #2107 : bincount - Complex Weights :
+
+Issue (brought up by another use) :
+bincount is a useful way to average values in an array with variable length bins (another is np.add.at, but that is not implemented here). This is also described in the numpy.bincount manual (https://docs.scipy.org/doc/numpy/reference/generated/numpy.bincount.html).
+However, if I give a complex64 array as the weights parameter, cupy.bincount fails with a NVRTCError/CompileException:
+
+Resolved :
+
+Added a feature in "cupy.bincount" which will now be able to calculate even if the weights parameter is an array of complex         numbers (taken into account that not all values may be complex, hence setting a x+0j value to integer/float values). The calculation would be to do bincount twice (with real/imaginary part of the weight) [as suggested by "@kmaehashi"]
+
+2) Submitted an Issue : CuPy not accepting list data types for operations #2138
+
+For any function on a list(array) data type, Cupy gives an error unless the array has been defined as a cupy.array(). In, numpy however, the list data type is accepted regardless of it being passed as numpy.array() or not.
+
+a = [10,15]
+b = cupy.log(a)
+
+This won't work in Cupy but will work in Numpy. a = cupy.array([10,15]) would work.
+TypeError: Unsupported type <class 'list'>
+This could cause problems for people shifting from Numpy to Cupy.
+
+3) Resolve Suggested
+
+Suggested a resolve for an installation Issue by downloading the Microsoft Visual C++ Build Tools for installation of CuPy in Windows.
 
 ### May 1th - May 28th, **Community Bonding Period**
 

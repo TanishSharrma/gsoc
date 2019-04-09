@@ -1,22 +1,34 @@
 # Developing and expanding CuPy library
+
 Tanish Sharrma, NumFocus 2019
+
+E-Mail : tanishsharrma22@gmail.com
+Mobile : +91-7838063629 (Whatsapp as well)
+github : @TanishSharrma
+LinkedIn : linkedin.com/in/TanishSharrma
+Resume : http://tanish.ueuo.com/cv.pdf
+
 
 ## Abstract
 
-CuPy is an open-source matrix library accelerated with NVIDIA CUDA. It also uses CUDA-related libraries including cuBLAS, cuDNN, cuRand, cuSolver, cuSPARSE, cuFFT and NCCL to make full use of the GPU architecture. Aiming to bring Numpy syntax coding into the modern age of GPU calculations by adding advanced FFT functions into CuPy. Expand the number of functions available for use on the GPU to allow more code to execute transparently on the GPU. Also, CuPy covers many of the functions that are provided by Numpy, but not all of them. To review the Numpy functions that CuPy doesn't cover yet, and implement them in CuPy to use the full speed of the GPU.
+CuPy is an open-source matrix library accelerated with NVIDIA CUDA. It also uses CUDA-related libraries including cuBLAS, cuDNN, cuRand, cuSolver, cuSPARSE, cuFFT and NCCL to make full use of the GPU architecture. Aiming to bring Numpy syntax coding into the modern age of GPU calculations by adding advanced FFT functions into CuPy.
 
 | **Intensity** | **Involves**  | **Mentors** |
 | ------------- | --------------|------------ |
 | Intermediate  | Python, NumPy |   asi1024   |
 |               | SciPy & CUDA  |             |
                   
-## Current Situation
+## Brief Roadmap and Aim
+
+Expand the number of functions available for use on the GPU to allow more code to execute transparently on the GPU. Also, CuPy covers many of the functions that are provided by Numpy, but not all of them. To review the Numpy functions that CuPy doesn't cover yet, and implement them in CuPy to use the full speed of the GPU.
+
+Adding SciPy functions along with adding new Statistical functionalities to the project.
 
 To Formalize CuPy Benchmark for code testing, when doing Continuous Integration testing for CuPy, there isn't a good estimator for the speed of the code. CuPy is all about improved speed of calculation on the GPU, so speed matters. Develop a comprehensive benchmark for CuPy to help assess how much speed enhancements help, and make sure that other code changes don't damage performance.
 
 ## Pre-GSoc Project Commits, Pull Requests and Issues and community work done :
 
-# 1) Pull Request and commit : Added a new feature and resolved for Issue #2107 : bincount - Complex Weights :
+### 1) Pull Request and commit : Added a new feature and resolved for Issue #2107 : bincount - Complex Weights :
 
 Issue #2107 (brought up by another use) :
 "bincount is a useful way to average values in an array with variable length bins (another is np.add.at, but that is not implemented here). This is also described in the numpy.bincount manual (https://docs.scipy.org/doc/numpy/reference/generated/numpy.bincount.html).
@@ -26,7 +38,7 @@ Resolved :
 
 Added a feature in "cupy.bincount" which will now be able to calculate even if the weights parameter is an array of complex         numbers (taken into account that not all values may be complex, hence setting a x+0j value to integer/float values). The calculation would be to do bincount twice (with real/imaginary part of the weight) [as suggested by "@kmaehashi"]
 
-# 2) Submitted an Issue : CuPy not accepting list data types for operations #2138
+### 2) Submitted an Issue : CuPy not accepting list data types for operations #2138
 
 For any function on a list(array) data type, Cupy gives an error unless the array has been defined as a cupy.array(). In, numpy however, the list data type is accepted regardless of it being passed as numpy.array() or not.
 
@@ -37,7 +49,7 @@ This won't work in Cupy but will work in Numpy. a = cupy.array([10,15]) would wo
 TypeError: Unsupported type <class 'list'>
 This could cause problems for people shifting from Numpy to Cupy.
 
-# 3) Resolve Suggested
+### 3) Resolve Suggested
 
 Suggested a resolve for an installation Issue by downloading the Microsoft Visual C++ Build Tools for installation of CuPy in Windows.
 

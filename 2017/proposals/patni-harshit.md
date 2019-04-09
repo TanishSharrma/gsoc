@@ -1,10 +1,15 @@
 # Developing and expanding CuPy library
 
 Tanish Sharrma, NumFocus 2019
+
 E-Mail : tanishsharrma22@gmail.com
+
 Mobile : +91-7838063629 (Whatsapp as well)
+
 github : @TanishSharrma
+
 LinkedIn : http://linkedin.com/in/TanishSharrma
+
 Resume : http://tanish.ueuo.com/cv.pdf
 
 

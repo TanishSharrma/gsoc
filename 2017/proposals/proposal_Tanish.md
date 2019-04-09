@@ -1,9 +1,9 @@
-# Developing and expanding CuPy library
+# Developing and Expanding CuPy library
 
 Tanish Sharrma, NumFocus 2019
 
 
-# Contact
+## Contact
 
 E-Mail : tanishsharrma22@gmail.com
 
@@ -22,7 +22,7 @@ CuPy is an open-source matrix library accelerated with NVIDIA CUDA. It also uses
 
 | **Intensity** | **Involves**  | **Mentors** |
 | ------------- | --------------|------------ |
-| Intermediate  | Python, NumPy |   asi1024   |
+| Intermediate  | Python, NumPy |   @asi1024  |
 |               | SciPy & CUDA  |             |
                   
 ## Brief Roadmap and Aim
@@ -33,19 +33,21 @@ Adding SciPy functions along with adding new Statistical functionalities to the 
 
 To Formalize CuPy Benchmark for code testing, when doing Continuous Integration testing for CuPy, there isn't a good estimator for the speed of the code. CuPy is all about improved speed of calculation on the GPU, so speed matters. Develop a comprehensive benchmark for CuPy to help assess how much speed enhancements help, and make sure that other code changes don't damage performance.
 
-## Pre-GSoc Project Commits, Pull Requests and Issues and community work done :
+## Pre-GSoc Project Commits, Pull Requests and Issues and Community Work :
 
 ### 1) Pull Request and commit : Added a new feature and resolved for Issue #2107 : bincount - Complex Weights :
+       [https://github.com/cupy/cupy/pull/2139] [https://github.com/cupy/cupy/issues/2107]
 
 Issue #2107 (brought up by another use) :
 "bincount is a useful way to average values in an array with variable length bins (another is np.add.at, but that is not implemented here). This is also described in the numpy.bincount manual (https://docs.scipy.org/doc/numpy/reference/generated/numpy.bincount.html).
 However, if I give a complex64 array as the weights parameter, cupy.bincount fails with a NVRTCError/CompileException:"
 
-Resolved :
+**Resolved :**
 
 Added a feature in "cupy.bincount" which will now be able to calculate even if the weights parameter is an array of complex         numbers (taken into account that not all values may be complex, hence setting a x+0j value to integer/float values). The calculation would be to do bincount twice (with real/imaginary part of the weight) [as suggested by "@kmaehashi"]
 
 ### 2) Submitted an Issue : CuPy not accepting list data types for operations #2138
+       [https://github.com/cupy/cupy/issues/2138]
 
 For any function on a list(array) data type, Cupy gives an error unless the array has been defined as a cupy.array(). In, numpy however, the list data type is accepted regardless of it being passed as numpy.array() or not.
 
@@ -57,8 +59,25 @@ TypeError: Unsupported type <class 'list'>
 This could cause problems for people shifting from Numpy to Cupy.
 
 ### 3) Resolve Suggested
+       [https://github.com/cupy/cupy/issues/2137]
 
 Suggested a resolve for an installation Issue by downloading the Microsoft Visual C++ Build Tools for installation of CuPy in Windows.
+
+## Motivation and Personal Statement
+
+I am currently pursuing a degree in Statistics (Mathematics) and Computers and have always found it fasinating and excieting to implement Statistical and Machine Learning tools and models to Computers. I believe that Google Summer of Code is the perfect opportunity for me to practically apply my knowledge and skills in a useful environment. CuPy offers the future of GPU computing by providing a faster alternative to the most used Python library (CPU Based); NumPy.
+
+This summer, I will solely be focusing on Google Summer of Code and have no other commitments.
+
+Ever since the true potential of GPU Computing has been observed, it has been seen that Next Generations of Servers seeming to replace the CPUs with faster, cost efficient, space- efficient performance it's impact on the future of Deep Learning and Artificial Intelligence. It's effect on Data Science and Big Data promises huge potential as well.  A short experiment to benchmark performance of NumPy vs CuPy and this is one of the driving factors that motivated me to join this project :
+
+## Benchmark Experiment
+
+An experiment was conducted by me by taking large random numbers (between 1 and 100 million) form a Random Distribution, obtaining their natural logarithm and then calculating the mean of those results. The test results (Data Set) has been provided after the graph demostrating the advantages of CuPy :
+
+![](graph.png)
+
+
 
 ### May 1th - May 28th, **Community Bonding Period**
 

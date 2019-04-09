@@ -96,27 +96,59 @@ GPU : GTX 1050ti 4 GB GDDR5 (CUDA GPU Computing power 6.0)
 
 ## Timeline
 
-### May 6th - May 27th, **Community Bonding Period**
+### **Community Bonding Period** : May 6th - May 27th 
 
 Before the official time period begins, I plan to further study about the architecture and structure of the CuPy library and its hardware aspect. During this period, under my mentor, I plan to :
+
     - Add NumPy functionalities to CuPy
+    
     - Help develop a NumPy fallback function for the functions and modules currently absent from CuPy. 
+    
     - Solve issues and bugs being brought up by the members of the community.
+    
     - Learn more about the long term goals for the CuPy project.
+    
     - Create an environment which makes it easier for future developers to join this project.
+    
     - Set up a blog and write weekly about the progress done.
+    
 
 ### Phase 1 : May 27th - June 24th
-
-
+	
+    - Adding Missing Numpy functionalities
+    
+    - Introducing SciPy functionalities
+    
+    - Developing a fallback model for missing NumPy modules and functions
+    
+    - Rigorously testing and comparing code to make it easier for NumPy users to port of CuPy
+    
+    - Fixing bugs and Issues that come up with adding NumPy functionalities.
+    
 
 ### Phase 2 : June 28th - July 22nd
-
+	
+    - Adding Statistical tools to the Cupy Library.
+    
+    - Developing "Statistical Inference" tools and functions for bias and estimator inference.
+    
+    - Adding Sampling modules along with Population and Survey Sampling techniques and tools.
+    
+    - Making the transitioning from CPU based to GPU based more efficient and easier.
+    
+    - Developing tools for t-test, f-test and Ho statistics.
 
 
 ### Phase 3 : July 26th - August 19th
 
-
+    - Introducing Machine Learning models (mainly related to Mathematics and Statistcis) to the CuPy library and ensure its stability.
+    
+    - Developing Regression analysis tools (for Linear, Bivatriate and Multivariate analysis)
+    
+    - Providing tools for the development of Linear Models and determining the BLUE (Best Linear Unbiast Estimator for both non- full rank and full rank cases)
+    
+    - Calculation of ANOVA Tables and determining of Confidence Interval / Limits for the provided data.
+        
 
 ### Future works (After GSoc)
 

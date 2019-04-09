@@ -13,6 +13,17 @@ Tanish Sharrma, NumFocus 2019
 | Github   | @TanishSharrma, https://github.com/TanishSharrma       |
 | Resume   | http://tanish.ueuo.com/cv.pdf                          |
 
+## INDEX
+
+| S.No.    |                                         TOPIC                                        |
+|----------|--------------------------------------------------------------------------------------|
+|   1      | Abstract                                                                             |
+|   2      | Brief Roadmap and Aim                                                                |
+|   3      | CuPy : Pre-GSoc Project Commits, Pull Requests, Issues and Community Work            |
+|   4      | Motivation and Personal Statement                                                    |
+|   5      | Benchmark Experiment: NumPy (CPU) vs CuPy (GPU)                                      |
+|   6      | Project Timeline and Details                                                         |
+
 
 ## Abstract
 
@@ -31,7 +42,7 @@ Adding SciPy functions along with adding new Statistical functionalities to the 
 
 To Formalize CuPy Benchmark for code testing, when doing Continuous Integration testing for CuPy, there isn't a good estimator for the speed of the code. CuPy is all about improved speed of calculation on the GPU, so speed matters. Develop a comprehensive benchmark for CuPy to help assess how much speed enhancements help, and make sure that other code changes don't damage performance.
 
-## Pre-GSoc Project Commits, Pull Requests and Issues and Community Work :
+## CuPy : Pre-GSoc Project Commits, Pull Requests and Issues and Community Work :
 
 ### 1) Pull Request and commit : Added a new feature and resolved for Issue #2107 : bincount - Complex Weights :
        [https://github.com/cupy/cupy/pull/2139] [https://github.com/cupy/cupy/issues/2107]
@@ -71,11 +82,11 @@ Ever since the true potential of GPU Computing has been observed, it has been se
 
 ## Benchmark Experiment
 
-An experiment was conducted by me by taking large random numbers (between 1 and 100 million) form a Random Distribution, obtaining their natural logarithm and then calculating the mean of those results. The test results (Data Set) has been provided after the graph demostrating the advantages of CuPy :
+10 experiments were conducted by me by taking large random numbers (between 1 and 100 million) form a Random Distribution, obtaining their natural logarithm and then calculating the mean of those results. The average time taken per million values over the course of these 10 experiments has been depicted. The test results (Data Set) has been provided at the end of this proposal, after the graph demostrating the advantages of CuPy :
 
 ![](graph.png)
 
-
+## Timeline
 
 ### May 1th - May 28th, **Community Bonding Period**
 

@@ -1,33 +1,18 @@
-# Title
-2D color maps
+# Developing and expanding CuPy library
+Tanish Sharrma, NumFocus 2019
 
 ## Abstract
 
-All of the color mapping in Matplotlib is currently derived from
-`ScalerMappable` which as the name suggests maps scalers from `R^1 ->
-R^4` RGBA color space.  It is common to want to map a vector to
-colors, for example to control the alpha based on a second value in a
-scatter plot or to show the orientation of a field.
+CuPy is an open-source matrix library accelerated with NVIDIA CUDA. It also uses CUDA-related libraries including cuBLAS, cuDNN, cuRand, cuSolver, cuSPARSE, cuFFT and NCCL to make full use of the GPU architecture. Aiming to bring Numpy syntax coding into the modern age of GPU calculations by adding advanced FFT functions into CuPy. Expand the number of functions available for use on the GPU to allow more code to execute transparently on the GPU.
 
 | **Intensity** | **Involves**  | **Mentors** |
 | ------------- | --------------|------------ |
-| Intermediate  | Python | tacaswell,story645 |
-
+| Intermediate  | Python, NumPy |   asi1024   |
+                  SciPy & CUDA
+                  
 ## Technical Details
 
-- All the work will be done in Python
-- It will be in accordance with current implementation of 1D colormaps.
-- Extending the existing 1D normalization for 2D data : This can be done by
-a family of normalizers which go from data -> unit-disk or square in the
-complex plane
-- Creating color maps that go from the unit disk or square -> RGBA
-- Exposing these classes to user as either new API or extending the existing
-`ScalerMappable` API
-- Implementing a 2D color bar
-- Developing 2D color maps : They can be created by doing bi-linear
-interpolation between four colours. Also major focus would be on developing
-perceptually friendly colormaps so that color blind people have no difficulty in
-distinguishing colors
+- All the work
 
 ## Schedule of Deliverables
 

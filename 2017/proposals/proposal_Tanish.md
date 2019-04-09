@@ -24,7 +24,7 @@ Tanish Sharrma, NumFocus 2019
 |   5      | Benchmark Experiment: NumPy (CPU) vs CuPy (GPU)                                      |
 |   6      | Project Timeline and Details                                                         |
 |   7      | Previous Projects and Work Experience                                                |
-|   8      | Dataset Result of the benchmark experiement (S.No. 5)                                |
+|   8      | Dataset Result of the benchmark experiment (S.No. 5)                                |
 
 
 ## Abstract
@@ -44,7 +44,7 @@ Adding SciPy functions along with adding new Statistical functionalities to the 
 
 To Formalize CuPy Benchmark for code testing, when doing Continuous Integration testing for CuPy, there isn't a good estimator for the speed of the code. CuPy is all about improved speed of calculation on the GPU, so speed matters. Develop a comprehensive benchmark for CuPy to help assess how much speed enhancements help, and make sure that other code changes don't damage performance.
 
-## CuPy : Pre-GSoc Project Commits, Pull Requests and Issues and Community Work :
+## CuPy: Pre-GSoc Project Commits, Pull Requests and Issues and Community Work
 
 ### 1) Pull Request and commit : Added a new feature and resolved for Issue #2107 : bincount - Complex Weights :
        [https://github.com/cupy/cupy/pull/2139] [https://github.com/cupy/cupy/issues/2107]
@@ -76,34 +76,34 @@ Suggested a resolve for an installation Issue by downloading the Microsoft Visua
 
 ## Motivation and Personal Statement
 
-I am currently pursuing a degree in Statistics (Mathematics) and Computers and have always found it fasinating and excieting to implement Statistical and Machine Learning tools and models to Computers. I believe that Google Summer of Code is the perfect opportunity for me to practically apply my knowledge and skills in a useful environment. CuPy offers the future of GPU computing by providing a faster alternative to the most used Python library (CPU Based); NumPy.
+I am currently pursuing a degree in Statistics (Mathematics) and Computers and have always found it fascinating and exciting to implement Statistical and Machine Learning tools and models to Computers. I believe that Google Summer of Code is the perfect opportunity for me to practically apply my knowledge and skills in a useful environment. CuPy offers the future of GPU computing by providing a faster alternative to the most used Python library (CPU Based); NumPy.
 
-I have been programming for over 12 years and have Machine Learning, Artificial Intelligence and CUDA experience as well. I have attended various conferences on GPU computing and am aware of the enourmous potential it has. This summer, I will solely be focusing on Google Summer of Code and have no other commitments.
+I have been programming for over 12 years and have Machine Learning, Artificial Intelligence and CUDA experience as well. I have attended various conferences on GPU computing and am aware of the enormous potential it has. This summer, I will solely be focusing on Google Summer of Code and have no other commitments.
 
-Ever since the true potential of GPU Computing has been observed, it has been seen that Next Generations of Servers seeming to replace the CPUs with faster, cost efficient, space- efficient performance it's impact on the future of Deep Learning and Artificial Intelligence. It's effect on Data Science and Big Data promises huge potential as well.  A short experiment to benchmark performance of NumPy vs CuPy and this is one of the driving factors that motivated me to join this project :
+Ever since the true potential of GPU Computing has been observed, it has been seen that Next Generations of Servers seeming to replace the CPUs with faster, cost efficient, space- efficient performance it's impact on the future of Deep Learning and Artificial Intelligence. It's effect on Data Science and Big Data promises huge potential as well.  A short experiment to benchmark performance of NumPy vs CuPy and this is one of the driving factors that motivated me to join this project:
 
 ## Benchmark Experiment
 
-10 experiments were conducted by me by taking large random numbers (between 1 and 100 million) from a Random Distribution, obtaining their natural logarithm and then calculating the mean of those results. The average time taken per million values over the course of these 10 experiments has been depicted. The test results (Data Set) has been provided at the end of this proposal, after the graph demostrating the advantages of CuPy :
+10 experiments were conducted by me by taking large random numbers (between 1 and 100 million) from a Random Distribution, obtaining their natural logarithm and then calculating the mean of those results. The average time taken per million values over the course of these 10 experiments has been depicted. The test results (Data Set) has been provided at the end of this proposal, after the graph demonstrating the advantages of CuPy :
 
 ![](graph.png)
 
-Specifications :
+Specifications:
 This experiment was conducted on a computer with the following hardware :
 CPU : Ryzen 5 2400G (2018 Model)
-RAM : 16 GB DDR4, 3000 Mhz
+RAM : 16 GB DDR4, 3000 MhZ
 GPU : GTX 1050ti 4 GB GDDR5 (CUDA GPU Computing power 6.0)
 
 ## Timeline
 
 ### May 6th - May 27th, **Community Bonding Period**
 
-Before the official time period begins I plan to further study about the architecture and structure of the CuPy library and its hardware aspect. During this period, under my mentor, I plan to :
+Before the official time period begins, I plan to further study about the architecture and structure of the CuPy library and its hardware aspect. During this period, under my mentor, I plan to :
     - Add NumPy functionalities to CuPy
     - Help develop a NumPy fallback function for the functions and modules currently absent from CuPy. 
     - Solve issues and bugs being brought up by the members of the community.
-    - Learn more about the long term goals for the CuPy project under my mentor.
-    - Create an enviroment which makes it easier for furture developers to join this project.
+    - Learn more about the long term goals for the CuPy project.
+    - Create an environment which makes it easier for future developers to join this project.
     - Set up a blog and write weekly about the progress done.
 
 ### Phase 1 : May 27th - June 24th
@@ -120,11 +120,15 @@ Before the official time period begins I plan to further study about the archite
 
 ### Future works (After GSoc)
 
-- In future, I plan to work on Game Theory applicantions' integration to CuPy (Axelrod Python library)
+- In future, I plan to work on Game Theory applications' integration to CuPy (Axelrod Python library)
 
 ## Other Projects and Work Experience
 
-I have undertaken 2 internships, one as a Software Engineer and one as a Data Science Researcher. I am eager to learn and have worked on several Machine Learning projects as well. I have undertaken substantial number of Mathematics and Computing classes and am ready to have first hand experience tackling real life issues with CuPy. Details of everything aforementioned are in my Resume : http://tanish.ueuo.com/cv.pdf
+I have undertaken two technical internships, one as a Software Engineer and one as a Data Science Researcher. I have been programming and developing complex Algorithms in Python and Java for a few years now and since 2017, have started undertaking projects in the field of Data Science, Machine Learning and Artificial Intelligence. During my Summer Internship in the previous year (As a Data Science Intern), I gained tremendous amount of experience and exposure and learned to implement my knowledge in a practical field. 
+
+I am eager to learn and have worked on several Machine Learning and Artificial Intelligence projects as well. Namely, Image Classifier using Convolutional Neural Network (CNN), Machine Learning models for datasets provided on Kaggle, Basics of CUDA and GPU Computing etc.
+
+I have undertaken substantial number of Mathematics and Computing classes and am ready to have first hand experience tackling real life issues with CuPy. Details of everything aforementioned are in my Resume : http://tanish.ueuo.com/cv.pdf
 
 ## Benchmark Experiment Raw Data
 

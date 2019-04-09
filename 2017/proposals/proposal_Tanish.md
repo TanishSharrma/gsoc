@@ -23,6 +23,8 @@ Tanish Sharrma, NumFocus 2019
 |   4      | Motivation and Personal Statement                                                    |
 |   5      | Benchmark Experiment: NumPy (CPU) vs CuPy (GPU)                                      |
 |   6      | Project Timeline and Details                                                         |
+|   7      | Previous Projects and Work Experience                                                |
+|   8      | Dataset Result of the benchmark experiement (S.No. 5)                                |
 
 
 ## Abstract
@@ -76,170 +78,144 @@ Suggested a resolve for an installation Issue by downloading the Microsoft Visua
 
 I am currently pursuing a degree in Statistics (Mathematics) and Computers and have always found it fasinating and excieting to implement Statistical and Machine Learning tools and models to Computers. I believe that Google Summer of Code is the perfect opportunity for me to practically apply my knowledge and skills in a useful environment. CuPy offers the future of GPU computing by providing a faster alternative to the most used Python library (CPU Based); NumPy.
 
-This summer, I will solely be focusing on Google Summer of Code and have no other commitments.
+I have been programming for over 12 years and have Machine Learning, Artificial Intelligence and CUDA experience as well. I have attended various conferences on GPU computing and am aware of the enourmous potential it has. This summer, I will solely be focusing on Google Summer of Code and have no other commitments.
 
 Ever since the true potential of GPU Computing has been observed, it has been seen that Next Generations of Servers seeming to replace the CPUs with faster, cost efficient, space- efficient performance it's impact on the future of Deep Learning and Artificial Intelligence. It's effect on Data Science and Big Data promises huge potential as well.  A short experiment to benchmark performance of NumPy vs CuPy and this is one of the driving factors that motivated me to join this project :
 
 ## Benchmark Experiment
 
-10 experiments were conducted by me by taking large random numbers (between 1 and 100 million) form a Random Distribution, obtaining their natural logarithm and then calculating the mean of those results. The average time taken per million values over the course of these 10 experiments has been depicted. The test results (Data Set) has been provided at the end of this proposal, after the graph demostrating the advantages of CuPy :
+10 experiments were conducted by me by taking large random numbers (between 1 and 100 million) from a Random Distribution, obtaining their natural logarithm and then calculating the mean of those results. The average time taken per million values over the course of these 10 experiments has been depicted. The test results (Data Set) has been provided at the end of this proposal, after the graph demostrating the advantages of CuPy :
 
 ![](graph.png)
 
+Specifications :
+This experiment was conducted on a computer with the following hardware :
+CPU : Ryzen 5 2400G (2018 Model)
+RAM : 16 GB DDR4, 3000 Mhz
+GPU : GTX 1050ti 4 GB GDDR5 (CUDA GPU Computing power 6.0)
+
 ## Timeline
 
-### May 1th - May 28th, **Community Bonding Period**
+### May 6th - May 27th, **Community Bonding Period**
 
-- Before the official time period begins I will do some tasks listed under
-[MEP21](http://matplotlib.org/devel/MEP/MEP21.html): color and cm refactor.
-This will greatly help in understanding the current implementation of
-normalization and color mapping tools in Matplotlib. Some tasks that can be
-done as part of this are:
-    - Tidying up namespace
-    - Defining a "Color" tuple
-    - Improving construction of colormap by changing current dictionary approach
-    - Analyzing  the feasibility of renaming `cm` module to something more
-      descriptive. It will be a major API change so this will be done only if
-      its pros outweighs cons
-- Set up a blog
-- Along with this I will continue to solve issues on github
+Before the official time period begins I plan to further study about the architecture and structure of the CuPy library and its hardware aspect. During this period, under my mentor, I plan to :
+    - Add NumPy functionalities to CuPy
+    - Help develop a NumPy fallback function for the functions and modules currently absent from CuPy. 
+    - Solve issues and bugs being brought up by the members of the community.
+    - Learn more about the long term goals for the CuPy project under my mentor.
+    - Create an enviroment which makes it easier for furture developers to join this project.
+    - Set up a blog and write weekly about the progress done.
 
-### May 29th - June 3rd
+### Phase 1 : May 27th - June 24th
 
-- Decide on how API will be exposed to users as new API or as extension of
-ScalerMappable
-- Start working on normalizers
 
-### June 5th - June 9th
 
-- Finish up normalizers
-- Write tests
-- Starting working on color map that maps unit circle or square to rgba
-- Write blog
+### Phase 2 : June 28th - July 22nd
 
-### June 12th - June 16th
 
-- Finish up color maps
-- Debug and test
-- Write tests
 
-### June 19th - June 23th, **End of Phase 1**
+### Phase 3 : July 26th - August 19th
 
-- Complete any unfinished work in Phase 1
-- Write documentation for code written so far
-- Write blog for Phase 1
 
-### June 26 - June 30th, **Begin of Phase 2**
 
-- Make API for exposing normalizers and color maps to user
-- Test new API
-- Document the API so that it is exposed to users
+### Future works (After GSoc)
 
-### July 3rd - July 7th
+- In future, I plan to work on Game Theory applicantions' integration to CuPy (Axelrod Python library)
 
-- Start implementing 2D color bar
-- Write blog
+## Other Projects and Work Experience
 
-### July 10th - July 14th
+I have undertaken 2 internships, one as a Software Engineer and one as a Data Science Researcher. I am eager to learn and have worked on several Machine Learning projects as well. I have undertaken substantial number of Mathematics and Computing classes and am ready to have first hand experience tackling real life issues with CuPy. Details of everything aforementioned are in my Resume : http://tanish.ueuo.com/cv.pdf
 
-- Continue implementing 2D color bar
+## Benchmark Experiment Raw Data
 
-### July 17th - July 21th, **End of Phase 2**
-
-- Complete any unfinished work of Phase 2
-- Write blog for Phase 2
-
-### July 24th - July 28th, **Begin of Phase 3**
-
-- Research on perceptually friendly colormaps
-
-### July 31st - August 4th
-
-- Develop 2D colormaps
-
-### August 7th - August 11th
-
-- Test and document colormaps
-- Write blog
-
-### August 14th - August 18th
-
-- Write examples for Matplotlib gallery to demonstrate 2D color maps
-
-### August 21st - August 25th, **Final Week**
-
-- Buffer period for any unfinished work
-- Write blog for Phase 3
-- Clean up code
-
-### August 28th - August 29th, **Submit final work**
-
-## Future works
-
-- In future the project can be extended to higher dimensions by mapping to
-quaternions as well.
-- Different types of colormaps can be added
-
-## Open Source Development Experience
-
-- (Merged) [#8094](https://github.com/matplotlib/matplotlib/pull/8094) Cleaned up documentation by removing an example
-- (Merged) [#8097](https://github.com/matplotlib/matplotlib/pull/8097) Improved the code to use plt.gca instead of plt.axes
-- (Merged) [#8154](https://github.com/matplotlib/matplotlib/pull/8154) Merged fill_demo and fill_demo_features examples
-- (Merged) [#8190](https://github.com/matplotlib/matplotlib/pull/8190) Added link to Gitter channel in readme
-- (Merged) [#8234](https://github.com/matplotlib/matplotlib/pull/8234) Fixed broken Gitter badge
-- (Merged) [#8343](https://github.com/matplotlib/matplotlib/pull/8343) Made ArrowStyle docstrings numpydoc compatible
-- (Open) [#8336](https://github.com/matplotlib/matplotlib/pull/8336) Merged three streamplot examples into one plot with subplots
-- (Open) [#8157](https://github.com/matplotlib/matplotlib/pull/8157) Added 'which' kwarg to autofmtxdate and wrote tests
-
-## Other Experiences
-
-- [AI-Bot](https://github.com/patniharshit/Ultimate-Tic-Tac-Toe) in python
-  for 4X4 Ultimate-Tic-Tac-Toe
-- [Brick-Breaker](https://github.com/patniharshit/Brick-Breaker), a 2d shooter
-  game in OpenGL
-- [Bloxorz](https://github.com/patniharshit/Bloxorz), a 3d puzzle game in OpenGL
-
-## Why this project?
-
-Currently there are no multidimensional colormaps in Matplotlib. This is a
-big nuisance if we want to modulate the color and opacity based on data in
-different dimensions independently. This project has been requested for a long
-time by people in neuroscience, astronomy etc.
-Here are some of those requests :
-
-- [#4369](https://github.com/matplotlib/matplotlib/issues/4369)
-- [Bivariate Colormaps](http://stackoverflow.com/questions/15207255/is-there-any-way-to-use-bivariate-colormaps-in-matplotlib)
-
-Having used Matplotlib for displaying graphical information several times, I
-wanted to give something back to the community. I am the right person to do
-this project because not only I want to contribute to Open Source but I have
-also worked closely with the community for last month so I have good
-understanding of workflow.
-
-## Appendix
-
-### About Me
-
-I am a sophomore at International Institute of Information Technology,
-Hyderabad majoring in Computer Science. I have intermediate proficiency in
-Python and have worked on several projects with it. I am also an active
-contributor of Matplotlib for some time.
-
-### Contact
-|          |                                                        |
-|----------|--------------------------------------------------------|
-| Name     | Harshit Patni                                          |
-| Email    | patniharshit@gmail.com                                 |
-|          | harshit.patni@students.iiit.ac.in                      |
-| Github   | [patniharshit](https://github.com/patniharshit)        |
-| Gitter   | patniharshit                                           |
-
-### Availability
-
-I don't have any commitments in summer and GSOC will be my full time job.
-My summer vacations starts on 27 April and college reopens in last week of
-July.
-
-* **Time Zone :** Indian Standard Time (IST) UTC +5:30
-*  **Hours per week :** 35-40 hours(during vacations), this may go down to
-30-35 hours in August
+Data Size (in Million)	NumPy	CuPy
+		
+1	0.033001184	0.566046238
+2	0.080005407	0.01743865
+5	0.206018448	0.039004087
+10	0.295022726	0.073099852
+25	0.554044485	0.169439793
+50	1.098106384	0.283161163
+75	1.665119648	0.425621986
+100	2.23718524	0.566138744
+		
+1	0.028001547	0.52785635
+2	0.058004856	0.017000914
+5	0.155011892	0.041003704
+10	0.307024956	0.073003054
+25	0.57106328	0.173015356
+50	1.102072477	0.296225786
+75	1.736142635	0.434362888
+100	2.263186693	0.574162006
+		
+1	0.022001266	0.55436945
+2	0.046004057	0.015001297
+5	0.110008717	0.036002874
+10	0.220018387	0.062647104
+25	0.554045439	0.149012804
+50	1.093089819	0.274021387
+75	1.695138216	0.432865858
+100	2.27818656	0.57603097
+		
+1	0.031001329	0.549311638
+2	0.071005583	0.015000343
+5	0.231019258	0.033616543
+10	0.466037512	0.06113863
+25	0.562045097	0.153815746
+50	1.077087402	0.277036905
+75	1.709139585	0.424188137
+100	2.199180841	0.565034628
+		
+1	0.036002636	0.50888133
+2	0.065004349	0.014997959
+5	0.126009703	0.033002138
+10	0.217018366	0.062006712
+25	0.537043095	0.150317192
+50	1.078088522	0.274814367
+75	1.628133059	0.432635069
+100	2.258185863	0.563354969
+		
+1	0.027001858	0.500862837
+2	0.050004244	0.017000914
+5	0.11400938	0.039807558
+10	0.218034267	0.076020718
+25	0.558030128	0.169196606
+50	1.273121357	0.289659023
+75	1.965142965	0.427166462
+100	2.29218626	0.570260525
+		
+1	0.021996021	0.544084787
+2	0.049003124	0.016615152
+5	0.111011505	0.036003828
+10	0.221015453	0.065004587
+25	0.548044205	0.150896788
+50	1.091088772	0.271864176
+75	1.660151243	0.427860975
+100	2.300172806	0.56648159
+		
+1	0.025002241	0.512556791
+2	0.047003746	0.018000603
+5	0.10702467	0.0400033
+10	0.218000412	0.073000908
+25	0.543044329	0.170437336
+50	1.084089518	0.297247648
+75	1.661135197	0.432933569
+100	2.209177256	0.559125185
+		
+1	0.02200222	0.484235764
+2	0.044002771	0.015683651
+5	0.109008789	0.035800934
+10	0.240019321	0.064005375
+25	0.547044754	0.150373697
+50	1.099090815	0.278987885
+75	1.678136826	0.428530693
+100	2.221181393	0.562766314
+		
+1	0.022002697	0.534286261
+2	0.045002699	0.016898632
+5	0.109009266	0.0392313
+10	0.219034195	0.0752635
+25	0.543027163	0.164491415
+50	1.091090202	0.280375957
+75	1.670138121	0.434535027
+100	2.197177887	0.564449072
